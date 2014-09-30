@@ -1,0 +1,9 @@
+<%= render 'lists/list', list: @list %>
+
+<%= render 'steps/form' %>
+
+<% @list.steps.each do |step| %>
+	
+	<%= render 'steps/step', step: step unless step.new_record? %>
+	
+<% end %>
