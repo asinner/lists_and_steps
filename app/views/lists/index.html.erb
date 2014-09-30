@@ -1,0 +1,17 @@
+<h1>Your lists</h1>
+
+<% if @lists.any? %>
+	
+	<% @lists.each do |list| %>
+	
+		<%= render 'lists/list', list: list %>
+		
+	<% end %>
+	
+<% else %>
+  
+	<p>No lists have been added</p>
+
+<% end %>
+
+<%= link_to 'New list', new_list_path %>

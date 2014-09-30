@@ -1,0 +1,11 @@
+<h4>Add a step</h4>
+<%= form_for [@list, @step] do |f| %>
+	<div>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+	</div>
+	
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
